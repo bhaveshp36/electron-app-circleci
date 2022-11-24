@@ -19,7 +19,6 @@ jobs:
           command: |
             sudo apt-get update -y
             sudo apt-get install -y dpkg fakeroot
-            sudo apt-get install -y rpm-build
 
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}

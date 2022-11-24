@@ -3,9 +3,15 @@ jobs:
   build:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:11
+      - image: cimg/node:latest
     steps:
       - checkout
+      - run:
+          name: Install dpkg and fakeroot
+          command: |
+            sudo apt-get update -y
+            sudo apt-get install -y dpkg fakeroot
+            sudo apt-get install -y rpm-build
       - run:
           name: Update NPM
           command: "sudo npm install -g npm"
@@ -14,13 +20,6 @@ jobs:
       - run:
           name: Install Dependencies
           command: npm install
-      - run:
-          name: Install dpkg and fakeroot
-          command: |
-            sudo apt-get update -y
-            sudo apt-get install -y dpkg fakeroot
-            sudo apt-get install -y rpm-build
-
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:

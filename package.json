@@ -1,0 +1,38 @@
+{
+  "name": "greenieweb",
+  "productName": "Greenie Web",
+  "version": "1.0.3",
+  "description": "Application to Decarbonize Websites",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": {
+    "name": "Minh Vy ha"
+  },
+  "license": "LICENSE.md",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.3",
+    "@electron-forge/maker-deb": "^6.0.3",
+    "@electron-forge/maker-rpm": "^6.0.3",
+    "@electron-forge/maker-squirrel": "^6.0.3",
+    "@electron-forge/maker-zip": "^6.0.3",
+    "electron": "^21.3.0"
+  },
+  "dependencies": {
+    "about-window": "^1.15.2",
+    "arraybuffer-to-buffer": "^0.0.7",
+    "bootstrap": "^5.2.2",
+    "clean-css": "^5.3.1",
+    "csso": "^5.0.5",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "html-minifier": "^4.0.0",
+    "path": "^0.12.7",
+    "strip-comments": "^2.0.1",
+    "uglify-js": "^3.17.4"
+  }
+}
+

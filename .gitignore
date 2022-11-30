@@ -1,3 +1,4 @@
 node_modules
 out
+!out/make
 package-lock.json
